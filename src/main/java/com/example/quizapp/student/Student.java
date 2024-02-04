@@ -19,23 +19,20 @@ public class Student {
     )
     private long id;
     private String name;
-    private Integer age;
-    private LocalDate dob;
     private String email;
+    private long mobile;
 
-    public Student(long id, String name, Integer age, LocalDate dob, String email) {
+    public Student(long id, String name, String email, long mobile) {
         this.id = id;
         this.name = name;
-        this.age = age;
-        this.dob = dob;
         this.email = email;
+        this.mobile = mobile;
     }
 
-    public Student(String name, Integer age, LocalDate dob, String email) {
+    public Student(String name, String email, long mobile) {
         this.name = name;
-        this.age = age;
-        this.dob = dob;
         this.email = email;
+        this.mobile = mobile;
     }
 
     public Student() {
@@ -57,22 +54,6 @@ public class Student {
         this.name = name;
     }
 
-    public Integer getAge() {
-        return age;
-    }
-
-    public void setAge(Integer age) {
-        this.age = age;
-    }
-
-    public LocalDate getDob() {
-        return dob;
-    }
-
-    public void setDob(LocalDate dob) {
-        this.dob = dob;
-    }
-
     public String getEmail() {
         return email;
     }
@@ -81,14 +62,21 @@ public class Student {
         this.email = email;
     }
 
+    public long getMobile() {
+        return mobile;
+    }
+
+    public void setMobile(long mobile) {
+        this.mobile = mobile;
+    }
+
     @Override
     public String toString() {
         return "Student{" +
                 "id=" + id +
                 ", name='" + name + '\'' +
-                ", age=" + age +
-                ", dob=" + dob +
                 ", email='" + email + '\'' +
+                ", mobile=" + mobile +
                 '}';
     }
 }
